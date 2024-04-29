@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        /* CSS for styling the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"],
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<h2>Calculator</h2>
+<form action="/calculate" method="get">
+    <label for="num1">Number 1:</label>
+    <input type="number" name="number1" id="num1"><br><br>
+    <label for="num2">Number 2:</label>
+    <input type="number" name="number2" id="num2"><br><br>
+    <label for="operation">Operation:</label><br>
+    <input type="radio" name="operation" value="add" id="operation"> Add<br>
+    <input type="radio" name="operation" value="subtract" id="operation"> Subtract<br><br>
+    <button type="submit">Calculate</button>
+</form>
+</body>
+</html>
